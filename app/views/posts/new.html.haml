@@ -1,0 +1,14 @@
+!!!
+%html
+    %body
+        %form_tag{:action => "/", :method => "post"}
+            Date:
+            %input{:name => "title", :type => "date"}
+            %br
+            Check In:
+            %input{:name => "check_in", :type => "time"}
+            %br
+            Check Out:
+            %input{:name => "check_out", :type => "time"}
+            %br
+            %input{:type => "submit", :value => "send"}
