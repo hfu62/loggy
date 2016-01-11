@@ -1,22 +1,12 @@
 !!!
-
 %html{lang: "ja"}
+  %head
+    %meta{charset: "utf-8"}
+    %title Loggy
+    %h1 ◯◯さんのマイページ
+
+    %ol
+      %li 出勤登録
+      %li 出勤確認・編集
 
   %body
-    %form{:action => "/", :method => "post"}
-      Title:
-      %input{:name => "title", :size => "40"}
-      %br
-      URL:
-      %input{:name => "url", :size => "80", :value => "http://"}
-      %br
-      %input{:type => "submit", value => "send"}
-    @user.each do |bookmark|
-      %div
-          %a{:href => bookmark['url']}= h bookmark['title']
-          unless bookmark['title'] == ''
-    %div#record 登録数#{@now_rec}
-    %div#page #{@paging}
-
-%h1 Pages#index
-%p Find me in app/views/pages/index.html.haml
