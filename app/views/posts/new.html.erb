@@ -1,0 +1,24 @@
+<div>
+<%= form_tag('/posts', method: :post) do %>
+          Put your information
+    </h3>
+    <div>
+    <label>Date</label><br>
+      <input placeholder="Data" type="date" name="date">
+    </div>
+    <div>
+      <label>Arrival Time</label><br>
+      <input placeholder="Arrival Time" type="time" name="check_in">
+    </div>
+    <div>
+      <label>Departure Time</label><br>
+      <input placeholder="Departure Time" type="time" name="check_out">
+    </div>
+    <div>
+      <input type="submit", value=SENT>
+  </form>
+
+    </div>
+  <% end %>
+</div>
+
