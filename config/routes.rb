@@ -4,7 +4,10 @@ Rails.application.routes.draw do
 
   get 'pages/show'
 
+  resources :posts, only: :create
+  get 'posts' => 'posts#index'
   get 'posts/new'
+  post 'posts' => 'posts/create'
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

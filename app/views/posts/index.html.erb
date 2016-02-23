@@ -1,0 +1,13 @@
+<div class="contents row" >
+  <% @posts.each do |post| %>
+    <<div class="content_post" style="background-image">
+      <p><%= post.check_in %></p>
+      <p><%= post.check_out %></p>
+    </div>
+  <% end %>
+</div>
+<!--
+%p hello world!
+%p 投稿が完了したから戻ってね
+
+%p [戻る]でもまだhamlでのaタグの書き方が分かんない -->
