@@ -3,6 +3,7 @@
     <<div class="content_post" style="background-image">
       <p><%= post.check_in %></p>
       <p><%= post.check_out %></p>
+      <%= link_to '削除', "/posts/#{post.id}", method: :delete %>
     </div>
   <% end %>
 </div>

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :posts, only: :create
   get 'posts' => 'posts#index'
   get 'posts/new'
+  delete  'posts/:id'  => 'posts#destroy'
 # =======
 #   get 'posts'     => 'posts#index'
 #   get 'posts/new'

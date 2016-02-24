@@ -16,6 +16,13 @@ class PostsController < ApplicationController
     Post.create(post_params)
   end
 
+  def destroy
+    post = Post.find(params[:id])
+    # if post.user_id == current.user_id
+      post.destroy
+    end
+  end
+
   private
   def post_params
     params.permit(:date, :check_in, :check_out)
