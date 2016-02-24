@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   resources :posts, only: :create
   get 'posts' => 'posts#index'
   get 'posts/new'
-  post 'posts' => 'posts/create'
 # =======
 #   get 'posts'     => 'posts#index'
 #   get 'posts/new'
