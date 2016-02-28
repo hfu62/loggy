@@ -1,11 +1,15 @@
 <div class="contents row" >
   <% @posts.each do |post| %>
-    <<div class="content_post" style="background-image">
-      <p><%= post.check_in %></p>
-      <p><%= post.check_out %></p>
+    <div class="content_post" style="background-image">
+      <p><%= post.date.strftime %></p>
+      <p><%= post.check_in.hour %>:<%= post.check_in.min %>-<%= post.check_out.hour %>:<%= post.check_out.min %></p>
       <%= link_to '削除', "/posts/#{post.id}", method: :delete %>
+      <%= link_to '編集', "/posts/#{post.id}/edit", method: :get %>
     </div>
+    <br>
   <% end %>
+
+  <p><a href="/">戻る</a></p>
 </div>
 <!--
 %p hello world!

@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get 'posts' => 'posts#index'
   get 'posts/new'
   delete  'posts/:id'  => 'posts#destroy'
+  patch  'posts/:id'  => 'posts#update'
+  get 'posts/:id/edit' => 'posts#edit'
 # =======
 #   get 'posts'     => 'posts#index'
 #   get 'posts/new'
