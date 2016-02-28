@@ -1,0 +1,25 @@
+<div>
+<%= form_tag("/posts/#{@post.id}", method: :patch) do %>
+  <h2><center>Edit the information</center></h2>
+    </h3>
+    <div>
+    <label>Date</label><br>
+      <%= "#{@post.date.month}" "/" "#{@post.date.day}"%>
+    <div>
+      <label>Arrival Time</label><br>
+      <input placeholder="Arrival Time" type="time"  value="<%= @post.check_in %>" name="check_in">
+    </div>
+    <div>
+      <label>Departure Time</label><br>
+      <input placeholder="Departure Time" value="<%= @post.check_in %>" type="time" name="check_out">
+    </div>
+    <br>
+    <div>
+      <input type="submit", value=SENT>
+      <br>
+  </form>
+
+    </div>
+  <% end %>
+</div>
+

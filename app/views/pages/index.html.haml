@@ -3,10 +3,14 @@
   %head
     %meta{charset: "utf-8"}
     %title Loggy
-    %h1 ◯◯さんのマイページ
+    %h1
+      %center マイページ
 
-    %ol
-      %li 出勤登録
-      %li 出勤確認・編集
+    %h3
+      %ol
+        %li
+          %a{:href => "posts/new"}出勤登録
+        %li
+          %a{:href=> "posts"}出勤確認・編集
 
   %body

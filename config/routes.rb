@@ -4,16 +4,18 @@ Rails.application.routes.draw do
 
   get 'pages/show'
 
-<<<<<<< HEAD
+# <<<<<<< HEAD
   resources :posts, only: :create
   get 'posts' => 'posts#index'
   get 'posts/new'
-  post 'posts' => 'posts/create'
-=======
-  get 'posts'     => 'posts#index'
-  get 'posts/new'
-  post 'posts'    => 'posts#create'
->>>>>>> 8de69b310e754c3be03c53c4418943c4816e21d1
+  delete  'posts/:id'  => 'posts#destroy'
+  patch  'posts/:id'  => 'posts#update'
+  get 'posts/:id/edit' => 'posts#edit'
+# =======
+#   get 'posts'     => 'posts#index'
+#   get 'posts/new'
+#   post 'posts'    => 'posts#create'
+# >>>>>>> 8de69b310e754c3be03c53c4418943c4816e21d1
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
